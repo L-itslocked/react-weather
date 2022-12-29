@@ -52,14 +52,17 @@ export default function Search() {
         </form>
         <div className="Weather">
           <h3> 👋 {city}! </h3>
-          <p>
-            Temperature: {showTemperature}°F
-            <br />
-            Humidity: {showHumidity}%
-            <br />
-            Wind: {showWind} mph
-            <br />
-          </p>
+          <div>
+            <ul>
+              <li>Temperature: {temperature}°F</li>
+              <li>Humidity: {humidity}%</li>
+              <li>Wind: {wind} mph</li>
+              <li>
+                `https://openweathermap.org/img/wn/
+                {response.data.weather[0].icon}@2x.png`
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
