@@ -9,9 +9,7 @@ root.render(
   <React.StrictMode>
     <App />
     <p>
-      <a href="https://github.com/L-itslocked/weather-react-project">
-        Open source code
-      </a>
+      <a href="https://github.com/L-itslocked/my-app">Open source code</a>
       by Laura Doyon
     </p>
   </React.StrictMode>
