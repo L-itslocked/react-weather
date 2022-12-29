@@ -7,11 +7,14 @@ export default function Search() {
   const [temperature, setTemperature] = useState(null);
   const [humidity, setHumidity] = useState(null);
   const [wind, setWind] = useState(null);
+  const [icon, setIcon] = useState(null);
 
   function showTemperature(response) {
     setTemperature(Math.round(response.data.main.temp));
     setHumidity(Math.round(response.data.main.humidity));
     setWind(Math.round(response.data.wind.speed));
+    setIcon(`https://www.openweathermap.org/img/wn/
+                ${response.data.weather[0].icon}@2x.png`);
   }
 
   function updateCity(event) {
@@ -57,10 +60,7 @@ export default function Search() {
               <li>Temperature: {temperature}°F</li>
               <li>Humidity: {humidity}%</li>
               <li>Wind: {wind} mph</li>
-              <li>
-                `https://openweathermap.org/img/wn/
-                {response.data.weather[0].icon}@2x.png`
-              </li>
+              <li>{icon}</li>
             </ul>
           </div>
         </div>
