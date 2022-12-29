@@ -3,18 +3,15 @@ import axios from "axios";
 import "./index.css";
 
 export default function Search() {
-  let [city, setCity] = useState(null);
-  let [temperature, setTemperature] = useState(null);
+  const [city, setCity] = useState(null);
+  const [temperature, setTemperature] = useState(null);
+  const [humidity, setHumidity] = useState(null);
+  const [wind, setWind] = useState(null);
 
   function showTemperature(response) {
     setTemperature(Math.round(response.data.main.temp));
-  }
-  function showHumidity(response) {
-    Math.round(response.data.main.humidity);
-  }
-
-  function showWind(response) {
-    Math.round(response.data.wind.speed);
+    setHumidity(Math.round(response.data.main.humidity));
+    setWind(Math.round(response.data.wind.speed));
   }
 
   function updateCity(event) {
@@ -23,12 +20,10 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    updateCity();
+    let api = "acf4f9701d8363a6ed361252f2b74e65";
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&appid=${api}&units=imperial`;
+    axios.get(weatherUrl).then(showTemperature);
   }
-
-  let api = "acf4f9701d8363a6ed361252f2b74e65";
-  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&appid=${api}&units=imperial`;
-  axios.get(weatherUrl).then(showTemperature);
 
   if (temperature === null) {
     return (
