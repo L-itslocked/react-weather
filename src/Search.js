@@ -27,39 +27,31 @@ export default function Search() {
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&appid=${api}&units=imperial`;
     axios.get(weatherUrl).then(showTemperature);
   }
+  let form = (
+    <form onSubmit={handleSubmit}>
+      <input type="search" placeholder="enter a city" onChange={updateCity} />
+      <input type="submit" value="Search" />
+    </form>
+  );
 
   if (temperature === null) {
     return (
       <div className="ContainerSearch">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="enter a city"
-            onChange={updateCity}
-          />
-          <input type="submit" value="Search" />
-        </form>
+        {form}
         <small>please enter a city</small>
       </div>
     );
   } else {
     return (
       <div className="ContainerResults">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="enter a city"
-            onChange={updateCity}
-          />
-          <input type="submit" value="Search" />
-        </form>
+        {form}
         <div className="Weather">
           <h3> 👋 {city}! </h3>
           <div>
             <ul>
               <li>Temperature: {temperature}°F</li>
               <li>Humidity: {humidity}%</li>
-              <li>Wind: {wind} mph</li>
+              <li>Wind: {wind} km/h</li>
               <li>{icon}</li>
             </ul>
           </div>
