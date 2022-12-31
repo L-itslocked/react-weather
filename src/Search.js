@@ -36,13 +36,13 @@ export default function Search() {
         autoFocus="on"
         onChange={updateCity}
       />
-      <input type="submit" value="Search" />
+      <input type="Submit" value="Search" className="btn btn-primary" />
     </form>
   );
 
   if (temperature === null) {
     return (
-      <div className="ContainerSearch">
+      <div>
         {form}
         <small>please enter a city</small>
       </div>
