@@ -9,8 +9,10 @@ root.render(
   <React.StrictMode>
     <App />
     <p>
-      <a href="https://github.com/L-itslocked/my-app">Open source code</a> by
-      Laura Doyon
+      <a href="https://github.com/L-itslocked/my-app">
+        Open-source code on GitHub{" "}
+      </a>{" "}
+      by Laura Doyon
     </p>
   </React.StrictMode>
 );
