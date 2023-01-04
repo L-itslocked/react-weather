@@ -55,13 +55,18 @@ export default function Search() {
         {form}
         <div className="Weather">
           <h3> 👋 {city}! </h3>
-          <div>
-            <ul>
-              <li>Temperature: {temperature}°F</li>
-              <li>Humidity: {humidity}%</li>
-              <li>Wind: {wind} mph</li>
-              <li>{icon}</li>
-            </ul>
+          <div className="row">
+            <div className="col-8">
+              <ul>
+                <li>Temperature: {temperature}°F</li>
+                <li>Humidity: {humidity}%</li>
+                <li>Wind: {wind} mph</li>
+                <li>{icon}</li>
+              </ul>
+              <div className="col-4">
+                <img src="/" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
