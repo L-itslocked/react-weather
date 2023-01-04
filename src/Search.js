@@ -24,11 +24,12 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let api = "4d475337437168dcfab5cc631940d51b";
+    let api = "2718952144ed077c12e7c160fb6fc351";
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&appid=${api}&units=imperial`;
     axios.get(weatherUrl).then(showTemperature);
   }
-  let form = (
+
+ let form = (
     <form onSubmit={handleSubmit}>
       <input
         type="search"
