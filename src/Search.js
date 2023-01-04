@@ -11,11 +11,12 @@ export default function Search() {
   const [icon, setIcon] = useState(null);
 
   function showTemperature(response) {
+    let weatherIcon = `https://www.openweathermap.org/img/wn/
+                ${response.data.weather[0].icon}@2x.png`;
     setTemperature(Math.round(response.data.main.temp));
     setHumidity(Math.round(response.data.main.humidity));
     setWind(Math.round(response.data.wind.speed));
-    setIcon(`https://www.openweathermap.org/img/wn/
-                ${response.data.weather[0].icon}@2x.png`);
+    setIcon({ weatherIcon });
   }
 
   function updateCity(event) {
@@ -25,11 +26,11 @@ export default function Search() {
   function handleSubmit(event) {
     event.preventDefault();
     let api = "2718952144ed077c12e7c160fb6fc351";
-    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${updateCity}&appid=${api}&units=imperial`;
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=imperial`;
     axios.get(weatherUrl).then(showTemperature);
   }
 
- let form = (
+  let form = (
     <form onSubmit={handleSubmit}>
       <input
         type="search"
@@ -50,7 +51,7 @@ export default function Search() {
     );
   } else {
     return (
-      <div className="ContainerResults">
+      <div className="form">
         {form}
         <div className="Weather">
           <h3> 👋 {city}! </h3>
@@ -58,7 +59,7 @@ export default function Search() {
             <ul>
               <li>Temperature: {temperature}°F</li>
               <li>Humidity: {humidity}%</li>
-              <li>Wind: {wind} km/h</li>
+              <li>Wind: {wind} mph</li>
               <li>{icon}</li>
             </ul>
           </div>
