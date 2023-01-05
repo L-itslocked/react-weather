@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import bootstrap from "bootstrap";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -10,12 +11,18 @@ root.render(
     <div className="container">
       <App />
     </div>
-    <p>
-      <a href="https://github.com/L-itslocked/my-app">
-        Open-source code on GitHub{" "}
-      </a>{" "}
-      by Laura Doyon
-    </p>
+    <nav className="navbar sticky-bottom bg-body-tertiary">
+      <div className="container-fluid">
+        <a className="navbar-brand">
+          <footer>
+            <a href="https://github.com/L-itslocked/my-app">
+              Open-source code on GitHub{" "}
+            </a>{" "}
+            by Laura Doyon
+          </footer>
+        </a>
+      </div>
+    </nav>
   </React.StrictMode>
 );
 
