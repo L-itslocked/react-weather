@@ -1,6 +1,7 @@
 :root {
-  --primary-color: ;
-  --secondary-color: #eafdfc;
+  --secondary-color: #f4f5fc;
+  --accent-color: #b989b3;
+  --background-color: #06223f;
 }
 h1,
 p {
@@ -9,5 +10,5 @@ p {
 
 li {
   list-style: none;
-  color: hotpink;
+  color: var(--secondary-color);
 }
