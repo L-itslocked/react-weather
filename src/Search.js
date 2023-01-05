@@ -3,6 +3,10 @@ import axios from "axios";
 import "./index.css";
 import "./Search.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const bootstrap = require("bootstrap");
+
 export default function Search() {
   const [city, setCity] = useState(null);
   const [temperature, setTemperature] = useState(null);
@@ -38,7 +42,11 @@ export default function Search() {
         autoFocus="on"
         onChange={updateCity}
       />
-      <input type="Submit" value="Search" className="btn btn-primary" />
+      <input
+        type="Submit"
+        value="Search"
+        className="btn btn-sm btn-dark shadow"
+      />
     </form>
   );
 
@@ -64,7 +72,7 @@ export default function Search() {
                 <li>{icon}</li>
               </ul>
               <div className="col-4">
-                <img src="/" />
+                <img src="images/globe.svg" alt="city weather conditions" />
               </div>
             </div>
           </div>
