@@ -13,13 +13,13 @@ li {
   list-style: none;
   color: var(--secondary-color);
 }
-form::placeholder {
+form,
+form::placeholder,
+form:focus-visible {
   color: var(--accent-color) !important;
   font-size: 14px;
 }
-form:focus {
-  color: var(--accent-color) !important;
-}
+
 .btn {
   font-size: 13px !important;
   margin-left: 10px;
