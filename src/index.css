@@ -33,6 +33,21 @@ body {
   align-items: center;
   margin: 250px auto;
 }
+.btn {
+  margin-left: 10px;
+  padding: 0px;
+  border-radius: 2.5px;
+  background: var(--background-color) !important;
+  color: white !important;
+}
+
+.btn:hover {
+  color: var(--background-color) !important;
+  border: 1px solid var(--background-color) !important;
+  background: white !important;
+  transition: ease-in-out 200ms;
+  cursor: pointer;
+}
 
 .App small {
   font-size: 10px;
