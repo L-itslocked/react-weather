@@ -12,7 +12,10 @@ root.render(
     </div>
     <nav className="navbar sticky-bottom bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand">
+        <a
+          className="navbar-brand"
+          href="https://dapper-tiramisu-226c4a.netlify.app/"
+        >
           <footer>
             <a href="https://github.com/L-itslocked/my-app">
               Open-source code on GitHub{" "}

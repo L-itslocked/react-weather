@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+//import { Typewriter } from "react-simple-typewriter";
 import "./index.css";
 import "./Search.css";
 
@@ -39,9 +40,10 @@ export default function Search() {
       <input
         type="search"
         placeholder="enter a city"
-        autoFocus="on"
+        autoFocus="off"
         onChange={updateCity}
       />
+
       <input
         type="Submit"
         value="Search"
@@ -53,8 +55,9 @@ export default function Search() {
   if (temperature === null) {
     return (
       <div>
-        {form}
-        <small>please enter a city</small>
+        {" "}
+        <div>{form}</div>
+        <small>please enter a city</small>{" "}
       </div>
     );
   } else {
@@ -62,7 +65,13 @@ export default function Search() {
       <div className="form">
         {form}
         <div className="Weather">
-          <h3> 👋 {city}! </h3>
+          <h3>
+            <span>
+              <img alt="waving hand" />
+              👋
+            </span>{" "}
+            {city}!
+          </h3>
           <div className="row">
             <div className="col-8">
               <ul>
