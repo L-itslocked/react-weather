@@ -3,16 +3,22 @@
   --accent-color: #b989b3;
   --background-color: #06223f;
 }
-
+h3 {
+  margin-top: 200px auto;
+}
 h1,
 p {
   font-family: "Roboto", sans-serif;
 }
-
+ul {
+  margin: 25px auto;
+}
 li {
   list-style: none;
-  color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: left;
 }
+
 form,
 form::placeholder,
 form:focus-visible {
@@ -35,4 +41,8 @@ form:focus-visible {
   background: white !important;
   transition: ease-in-out 200ms;
   cursor: pointer;
+}
+.globe-image,
+.weather-icon {
+  justify-content: right;
 }
