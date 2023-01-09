@@ -1,0 +1,10 @@
+:root {
+  --secondary-color: #f4f5fc;
+  --accent-color: #b989b3;
+  --background-color: #06223f;
+}
+.date {
+  text-align: right;
+  font-size: 13px;
+  color: var(--accent-color);
+}
