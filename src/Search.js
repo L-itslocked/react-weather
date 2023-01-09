@@ -5,6 +5,8 @@ import "./index.css";
 import "./Search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import WeatherResults from "./WeatherResults.js";
+
 const bootstrap = require("bootstrap");
 
 export default function Search() {
@@ -19,6 +21,7 @@ export default function Search() {
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       ready: true,
     });
   }
@@ -48,43 +51,14 @@ export default function Search() {
 
   if (weatherData.ready) {
     return (
-      <div className="form">
+      <div className="weather-ready">
         {form}
-        <div className="Weather">
-          <h3>
-            <span>
-              <a alt="waving hand" />
-              👋
-            </span>{" "}
-            Hi {weatherData.city}!
-          </h3>
-          <div className="row">
-            <div className="col-md-12 weather-icon">
-              <img
-                src={weatherData.icon}
-                alt={weatherData.description}
-                className="text-capitalize"
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-8">
-              <ul>
-                <li>Temperature: {weatherData.temperature}°F</li>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind} mph</li>
-              </ul>
-              <div className="col-md-3 globe-image">
-                <img src="images/globe.svg" alt="{city weather conditions}" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <WeatherResults data={weatherData} />
       </div>
     );
   } else {
     return (
-      <div>
+      <div className="weather-notready">
         <div>{form}</div>
         <small>please enter a city</small>{" "}
       </div>
