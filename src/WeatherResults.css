@@ -1,0 +1,25 @@
+:root {
+  --secondary-color: white;
+  --accent-color: #b989b3;
+  --background-color: #06223f;
+  --primary-font-family: "Playfair Display", serif;
+  --secondary-font-family: "Poppins", sans-serif;
+  --accent-font-family: "Roboto", sans-serif;
+}
+img {
+  color-scheme: dark;
+}
+ul {
+  margin: 25px auto;
+}
+li {
+  list-style: none;
+  color: var(--background-color);
+  font-family: var(--accent-font-family);
+  text-align: left;
+}
+
+.Weather {
+  text-align: center;
+  justify-items: center;
+}

@@ -14,15 +14,7 @@ h1,
 p {
   font-family: var(--primary-font-family);
 }
-ul {
-  margin: 25px auto;
-}
-li {
-  list-style: none;
-  color: var(--background-color);
-  font-family: var(--accent-font-family);
-  text-align: left;
-}
+
 
 form,
 form::placeholder,
@@ -46,8 +38,4 @@ form:focus-visible {
   background: white !important;
   transition: ease-in-out 200ms;
   cursor: pointer;
-}
-.globe-image,
-.weather-icon {
-  justify-content: right;
 }
