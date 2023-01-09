@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import { Typewriter } from "react-simple-typewriter";
 import "./index.css";
 import "./Search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import WeatherResults from "./WeatherResults.js";
-
-const bootstrap = require("bootstrap");
+//import { Typewriter } from "react-simple-typewriter";
 
 export default function Search() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,10 +15,10 @@ export default function Search() {
       temperature: Math.round(response.data.main.temp),
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
-      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
+      iconURL: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       ready: true,
     });
   }
@@ -32,7 +29,7 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let api = "2718952144ed077c12e7c160fb6fc351";
+    let api = "99b8f9330a1bfba3a85e523fd3c2e528";
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=imperial`;
     axios.get(weatherUrl).then(showWeatherInformation);
   }
