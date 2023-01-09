@@ -12,17 +12,16 @@ root.render(
     </div>
     <nav className="navbar sticky-bottom bg-body-tertiary">
       <div className="container-fluid">
-        <a
-          className="navbar-brand"
-          href="https://dapper-tiramisu-226c4a.netlify.app/"
-        >
-          <footer>
-            <a href="https://github.com/L-itslocked/my-app">
-              Open-source code on GitHub{" "}
-            </a>{" "}
-            by Laura Doyon
-          </footer>
-        </a>
+        <footer>
+          <a
+            href="https://github.com/L-itslocked/my-app"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Open-source code on GitHub{" "}
+          </a>{" "}
+          by Laura Doyon
+        </footer>
       </div>
     </nav>
   </React.StrictMode>

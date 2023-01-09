@@ -46,11 +46,12 @@ body {
 a:hover {
   color: var(--accent-color);
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
+
 a {
-  color: var(--accent-color);
-  text-decoration: none;
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
 }
 .navbar {
   background: fit-content;
