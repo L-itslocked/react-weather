@@ -2,6 +2,9 @@
   --secondary-color: #f4f5fc;
   --accent-color: #b989b3;
   --background-color: #06223f;
+  --primary-font-family: "Playfair Display", serif;
+  --secondary-font-family: "Poppins", sans-serif;
+  --accent-font-family: "Roboto", sans-serif;
 }
 body {
   background-image: url("images/starrysky.jpg");
