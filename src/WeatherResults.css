@@ -6,11 +6,16 @@
   --secondary-font-family: "Poppins", sans-serif;
   --accent-font-family: "Roboto", sans-serif;
 }
+h3 {
+  margin-top: 25px;
+  font-family: var(--accent-font-family);
+}
 img {
-  color-scheme: dark;
+  margin-right: 15px;
+  color-scheme: dark !important;
 }
 ul {
-  margin: 25px auto;
+  margin: 15px auto;
 }
 li {
   list-style: none;

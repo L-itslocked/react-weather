@@ -6,10 +6,7 @@
   --secondary-font-family: "Poppins", sans-serif;
   --accent-font-family: "Roboto", sans-serif;
 }
-h3 {
-  margin-top: 200px auto;
-  font-family: var(--accent-font-family);
-}
+
 h1,
 p {
   font-family: var(--primary-font-family);
