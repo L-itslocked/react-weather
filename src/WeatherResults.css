@@ -10,10 +10,7 @@ h3 {
   margin-top: 25px;
   font-family: var(--accent-font-family);
 }
-img {
-  margin-right: 15px;
-  color-scheme: dark !important;
-}
+
 ul {
   margin: 15px auto;
 }
@@ -23,8 +20,18 @@ li {
   font-family: var(--accent-font-family);
   text-align: left;
 }
-
+.date {
+  text-align: right;
+  font-size: 13px;
+  color: var(--accent-color);
+  font-family: var(--accent-font-family);
+  margin-right: 15px;
+}
 .Weather {
   text-align: center;
   justify-items: center;
+}
+.float-left {
+  margin: 13px auto;
+  display: inline-block;
 }

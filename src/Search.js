@@ -39,11 +39,7 @@ export default function Search() {
     <form onSubmit={handleSubmit}>
       <input type="search" autoFocus="off" onChange={updateCity} />
 
-      <input
-        type="Submit"
-        value="Search"
-        className="btn btn-sm btn-dark shadow"
-      />
+      <input type="Submit" value="Search" className="btn btn-sm shadow" />
     </form>
   );
 

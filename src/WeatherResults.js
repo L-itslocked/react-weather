@@ -20,18 +20,9 @@ export default function WeatherResults(props) {
             <WeatherIcon code={props.data.icon} />
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6">
-            <p className="forecast">
-              <a href="#">Upcoming Forecast</a>
-            </p>
-          </div>
-          <div className="col-md-6">
-            <p>
-              <DateAndTime date={props.data.date} />
-            </p>
-          </div>
-        </div>
+        <p>
+          <DateAndTime date={props.data.date} />
+        </p>
       </div>
     </div>
   );
