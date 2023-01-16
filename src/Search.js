@@ -4,6 +4,7 @@ import "./index.css";
 import "./Search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherResults from "./WeatherResults.js";
+
 //import { Typewriter } from "react-simple-typewriter";
 
 export default function Search() {
@@ -18,7 +19,7 @@ export default function Search() {
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      iconURL: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       ready: true,
     });
   }
