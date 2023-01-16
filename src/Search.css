@@ -7,19 +7,17 @@
   --accent-font-family: "Roboto", sans-serif;
 }
 
-h1,
-p {
+h1 {
   font-family: var(--primary-font-family);
 }
-
-
 form,
 form::placeholder,
 form:focus-visible {
-  color: var(--accent-color) !important;
   font-size: 14px;
 }
-
+input:focus {
+  outline-color: var(--accent-color) !important;
+}
 .btn {
   font-size: 13px !important;
   margin-left: 10px;
@@ -33,6 +31,6 @@ form:focus-visible {
   color: var(--background-color) !important;
   border: 1px solid var(--background-color) !important;
   background: white !important;
-  transition: ease-in-out 200ms;
+  transition: ease-in-out 400ms;
   cursor: pointer;
 }
