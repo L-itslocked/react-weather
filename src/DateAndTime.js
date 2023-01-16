@@ -1,5 +1,5 @@
 import React from "react";
-import "./DateAndTime.css";
+import "./WeatherResults.css";
 
 export default function StructuredDate(props) {
   let days = [
@@ -14,11 +14,11 @@ export default function StructuredDate(props) {
   let day = days[props.date.getDay()];
   let hours = props.date.getHours() - 12;
   let twentyfourhours = props.date.getHours();
-  let minutes = props.date.getMinutes();
-  let time = `${hours}:${minutes}`;
+  let minute = props.date.getMinutes();
+  let time = `${hours}:${minute}`;
   let meridien = " ";
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
+  if (minute < 10) {
+    minute = `0${minute}`;
   }
   if (twentyfourhours > 12) {
     meridien = `PM`;
