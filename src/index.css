@@ -67,6 +67,16 @@ a {
   min-width: 180px;
   text-align: center;
 }
+.coder-social {
+  font-size: 15px;
+  padding: 3px;
+}
+.coder-social:hover {
+  transition: 200ms ease-in-out;
+  font-size: 18px;
+  color: var(--background-color);
+}
+
 @media (max-width: 887px) {
   footer {
     margin: 0 auto;
